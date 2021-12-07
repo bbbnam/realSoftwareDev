@@ -7,7 +7,7 @@ import java.nio.file.Paths;
 import java.time.Month;
 import java.util.List;
 
-public class BankTransactionsAnalyzerSeperate {
+public class BankTransactionsAnalyzerSeperator {
 
     private static final String RESOURCES = "src/main/resources/";
     private static final BankStatementCSVParser bankStatementCSVParser = new BankStatementCSVParser();
