@@ -25,6 +25,7 @@ public class BankTransactionsAnalyzerSeperator {
     }
 
     private static void collectSummary(BankStatementProcessor bankStatementProcessor) {
+        
         System.out.println("The total for all transactions is "
                 + bankStatementProcessor.calculateTotalAmount());
 
