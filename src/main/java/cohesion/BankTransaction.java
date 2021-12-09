@@ -28,10 +28,10 @@ public class BankTransaction {
 
     @Override
     public String toString() {
-        return "BankTransaction{" +
-                "date=" + date +
-                ", amount=" + amount +
-                ", description='" + description + '\'' +
+        return "BankTransaction {" +
+                "date = " + date +
+                ", amount = " + amount +
+                ", description = '" + description + '\'' +
                 '}';
     }
 
