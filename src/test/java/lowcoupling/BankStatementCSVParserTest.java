@@ -6,7 +6,6 @@ import java.time.LocalDate;
 import java.time.Month;
 
 import static org.assertj.core.api.Assertions.assertThat;
-import static org.assertj.core.api.Assertions.fail;
 
 class BankStatementCSVParserTest {
     private final BankStatementParser statementParser = new BankStatementCSVParser();
@@ -17,9 +16,9 @@ class BankStatementCSVParserTest {
 
         final BankTransaction result = statementParser.parseFrom(line);
 
-        final BankTransaction expected = new BankTransaction(LocalDate.of(2017, Month.JANUARY, 30),
-                -50, "Tesco");
-        final double tolerance = 0.0d;
+        final BankTransaction expected = new BankTransaction(
+                LocalDate.of(2017, Month.JANUARY, 30), -50, "Tesco");
+        //final double tolerance = 0.0d;
 
         assertThat(expected.getDate()).isEqualTo(result.getDate());
         assertThat(expected.getAmount()).isEqualTo(result.getAmount());
