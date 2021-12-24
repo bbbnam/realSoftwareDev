@@ -35,7 +35,8 @@ public class BankTransactionsAnalyzerLowCoupling {
                 + bankStatementProcessor.calculateTotalInMonth(Month.FEBRUARY));
 
         System.out.println("The total for transactions in February and expensive is "
-                + bankStatementProcessor.findTransactions(new BankTransactionIsInFebruaryAndExpensive()));
+                + bankStatementProcessor.findTransactions(bankTransaction ->
+                bankTransaction.getDate().getMonth() == Month.FEBRUARY && bankTransaction.getAmount() >= 1_000));
 
         System.out.println("The total salary received is "
                 + bankStatementProcessor.calculateTotalForCategory("Salary"));
