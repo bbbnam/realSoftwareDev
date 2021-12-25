@@ -24,9 +24,6 @@ public class BankTransactionsAnalyzerLowCoupling {
     }
 
     private static void collectSummary(BankStatementProcessor bankStatementProcessor) {
-        
-        System.out.println("The total for all transactions is "
-                + bankStatementProcessor.calculateTotalAmount());
 
         System.out.println("The total for transactions in January is "
                 + bankStatementProcessor.calculateTotalInMonth(Month.JANUARY));
@@ -37,8 +34,5 @@ public class BankTransactionsAnalyzerLowCoupling {
         System.out.println("The total for transactions in February and expensive is "
                 + bankStatementProcessor.findTransactions(bankTransaction ->
                 bankTransaction.getDate().getMonth() == Month.FEBRUARY && bankTransaction.getAmount() >= 1_000));
-
-        System.out.println("The total salary received is "
-                + bankStatementProcessor.calculateTotalForCategory("Salary"));
     }
 }
