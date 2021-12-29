@@ -18,13 +18,13 @@ public class BankTransactionsAnalyzerLowCoupling {
 
         final List<BankTransaction> bankTransactions
                 = bankStatementCSVParser.parseLinesFrom(lines);
-        final BankStatementProcessor bankStatementProcessor = new BankStatementProcessor(bankTransactions);
+        final BankStatementProcessor bankStatementProcessor
+                = new BankStatementProcessor(bankTransactions);
 
         collectSummary(bankStatementProcessor);
     }
 
     private static void collectSummary(BankStatementProcessor bankStatementProcessor) {
-
         System.out.println("The total for transactions in January is "
                 + bankStatementProcessor.calculateTotalInMonth(Month.JANUARY));
 
